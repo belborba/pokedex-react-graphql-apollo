@@ -1,3 +1,9 @@
+import { SmallScreen } from "../SmallScreen";
+
 export const LeftFold = () => {
-  return <div>...</div>;
+  return (
+    <div>
+      <SmallScreen>Teste</SmallScreen>
+    </div>
+  );
 };
