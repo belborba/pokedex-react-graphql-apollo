@@ -1,3 +1,3 @@
 export const LeftFold = () => {
-  return <div>Database</div>;
+  return <div>...</div>;
 };
