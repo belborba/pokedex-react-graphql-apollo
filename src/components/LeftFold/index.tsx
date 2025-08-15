@@ -1,9 +1,9 @@
-import { SmallScreen } from "../SmallScreen";
+import { Light } from "../LightContainer";
 
 export const LeftFold = () => {
   return (
-    <div>
-      <SmallScreen>Teste</SmallScreen>
-    </div>
+    <>
+      <Light />
+    </>
   );
 };
