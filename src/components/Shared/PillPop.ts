@@ -30,8 +30,7 @@ export const Pill = styled.div<PillProps>`
     padding: ${({ ringWidth = 2 }) => `${ringWidth}px`};
     border-radius: 9999px;
     background: ${({ gradient }) =>
-      gradient ??
-      "linear-gradient(90deg, #b7f3c7, #31c75f, #b7f3c7)"}; /* verde */
+      gradient ?? "linear-gradient(90deg, #b7f3c7, #31c75f, #b7f3c7)"};
     -webkit-mask: linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;

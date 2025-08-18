@@ -22,10 +22,18 @@ export const BarContainer = styled.div`
   box-shadow: inset 2px 2px 6px rgba(148, 163, 190, 0.5);
 `;
 
-export const BarFill = styled.div<{ $value: number }>`
+export const BarFill = styled.div<{
+  $value: number;
+  $start: string;
+  $end: string;
+}>`
   height: 100%;
   width: ${({ $value }) => $value}%;
-  background: linear-gradient(90deg, #c6f6d5, #68d391);
+  background: linear-gradient(
+    90deg,
+    ${({ $start }) => $start},
+    ${({ $end }) => $end}
+  );
   border-radius: 50px;
   transition: width 0.8s ease-in-out;
 `;
