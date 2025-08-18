@@ -8,7 +8,7 @@ export const StyledCard = styled(Card)`
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  height: 600px;
+  gap: 3rem;
+  height: 680px;
   width: 420px;
 `;

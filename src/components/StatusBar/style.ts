@@ -1,0 +1,38 @@
+import styled from "styled-components";
+
+export const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+`;
+
+export const Label = styled.span`
+  font-size: 14px;
+  color: #333;
+  min-width: 60px;
+`;
+
+export const BarContainer = styled.div`
+  flex: 1;
+  height: 8px;
+  background: #e6edfa;
+  border-radius: 50px;
+  overflow: hidden;
+  border: 2px solid #fff;
+  box-shadow: inset 2px 2px 6px rgba(148, 163, 190, 0.5);
+`;
+
+export const BarFill = styled.div<{ $value: number }>`
+  height: 100%;
+  width: ${({ $value }) => $value}%;
+  background: linear-gradient(90deg, #c6f6d5, #68d391);
+  border-radius: 50px;
+  transition: width 0.8s ease-in-out;
+`;
+
+export const Value = styled.span`
+  font-size: 14px;
+  color: #333;
+  min-width: 30px;
+  text-align: right;
+`;

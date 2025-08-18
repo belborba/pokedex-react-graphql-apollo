@@ -4,7 +4,7 @@ import { Card } from "../../../components/Card";
 export const StyledCard = styled(Card)`
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-  border-left: 6px solid #e4ebf5;
+  border-left: 2px solid #e4ebf5;
   clip-path: polygon(
     63.527% 0.131%,
     63.527% 0.131%,
@@ -64,6 +64,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  height: 550px;
+  height: 635px;
   width: 420px;
 `;
