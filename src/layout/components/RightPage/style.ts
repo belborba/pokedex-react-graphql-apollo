@@ -66,4 +66,25 @@ export const Container = styled.div`
   gap: 2rem;
   height: 635px;
   width: 420px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  /* Estilização da scrollbar */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+  }
 `;

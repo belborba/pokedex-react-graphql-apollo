@@ -7,7 +7,7 @@ export const ContainerWrap = styled.div<PropsWithChildren>`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 90%;
+  width: 100%;
   max-width: 400px;
 `;
 

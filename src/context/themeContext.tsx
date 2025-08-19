@@ -1,15 +1,10 @@
 import { useState, type ReactNode } from "react";
 import { ThemeContext } from "./useThemeContext";
 
-interface ThemeProviderProps {
-  children: ReactNode;
-}
-
-export function ThemeProvider({ children }: ThemeProviderProps) {
-  const [pokemonType, setPokemonType] = useState<string | null>(null);
-
+export function ThemeProvider({ children }: { children: ReactNode }) {
+  const [pokemonName, setPokemonName] = useState<string>("pikachu");
   return (
-    <ThemeContext.Provider value={{ pokemonType, setPokemonType }}>
+    <ThemeContext.Provider value={{ pokemonName, setPokemonName }}>
       {children}
     </ThemeContext.Provider>
   );

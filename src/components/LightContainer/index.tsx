@@ -1,14 +1,24 @@
 import { StyledContainer } from "./style";
 import { Circle } from "../Shared/Circle";
+import { useThemeContext } from "@/context/useThemeContext";
+import { usePokemon } from "@/hooks/usePokemon";
+import { TYPE_GRADIENTS } from "@/constants/pokemonTypes";
 
 export const Light = () => {
+  const { pokemonName } = useThemeContext();
+  const { type } = usePokemon(pokemonName);
+  const [start, end] = type
+    ? TYPE_GRADIENTS[type as keyof typeof TYPE_GRADIENTS]
+    : ["#89cff0", "#0099cc"];
+  const bg = `linear-gradient(to bottom, ${start}, ${end})`;
+
   return (
     <div>
       <StyledContainer>
-        <Circle />
-        <Circle $size={30} $innerSize={20} />
-        <Circle $size={30} $innerSize={20} />
-        <Circle $size={30} $innerSize={20} />
+        <Circle $background={bg} />
+        <Circle $size={30} $innerSize={20} $background={bg} />
+        <Circle $size={30} $innerSize={20} $background={bg} />
+        <Circle $size={30} $innerSize={20} $background={bg} />
       </StyledContainer>
     </div>
   );

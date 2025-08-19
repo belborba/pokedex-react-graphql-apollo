@@ -4,6 +4,28 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   gap: 1rem;
+  padding: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  /* Estilização da scrollbar */
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+  }
 `;
 
 export const Card = styled.div`
@@ -13,15 +35,12 @@ export const Card = styled.div`
   text-align: center;
 
   img {
-    margin-top: -5px;
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
   }
 
   span {
-    margin-top: -10px;
-    margin-bottom: 10px;
     font-size: 14px;
     color: #333;
   }

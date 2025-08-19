@@ -5,6 +5,27 @@ export const RightContainer = styled.div`
   flex-direction: column;
   padding: 1.5rem 2rem;
   gap: 1.2rem;
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  /* Estilização da scrollbar */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 190, 0.3);
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 163, 190, 0.5);
+  }
 `;
 
 export const DisplayWrap = styled.div`

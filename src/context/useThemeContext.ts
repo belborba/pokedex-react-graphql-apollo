@@ -6,8 +6,8 @@ import {
 } from "react";
 
 interface ThemeContextType {
-  pokemonType: string | null;
-  setPokemonType: Dispatch<SetStateAction<string | null>>;
+  pokemonName: string;
+  setPokemonName: Dispatch<SetStateAction<string>>;
 }
 
 export const ThemeContext = createContext<ThemeContextType | undefined>(
@@ -15,9 +15,8 @@ export const ThemeContext = createContext<ThemeContextType | undefined>(
 );
 
 export const useThemeContext = () => {
-  const context = useContext(ThemeContext);
-  if (context === undefined) {
+  const ctx = useContext(ThemeContext);
+  if (!ctx)
     throw new Error("useThemeContext must be used within a ThemeProvider");
-  }
-  return context;
+  return ctx;
 };

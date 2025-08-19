@@ -1,11 +1,13 @@
 // Tag.tsx
 import styled from "styled-components";
+import { TYPE_GRADIENTS } from "@/constants/pokemonTypes";
 
 type PillProps = {
-  ringInset?: number; // distância da borda externa até o anel (px)
-  ringWidth?: number; // espessura do anel (px)
-  gradient?: string; // gradiente do anel
+  $ringInset?: number; // distância da borda externa até o anel (px)
+  $ringWidth?: number; // espessura do anel (px)
+  $gradient?: string; // gradiente do anel
   $margin?: string | number; // margem
+  $pokemonType?: string | null; // tipo do pokémon
 };
 
 export const Pill = styled.div<PillProps>`
@@ -19,23 +21,36 @@ export const Pill = styled.div<PillProps>`
   color: #333;
   font-weight: 600;
   font-size: 1.25rem;
-  box-shadow: 5px 5px 20px 0 #cfcfd9;
+  box-shadow: 0px 0px 5px 0 #cfcfd9;
   margin: ${({ $margin }) =>
     typeof $margin === "number" ? `${$margin}px` : $margin || "0"};
+  z-index: 1;
+  min-width: 120px;
+  text-align: center;
 
   &::before {
     content: "";
     position: absolute;
-    inset: ${({ ringInset = 4 }) => `${ringInset}px`};
-    padding: ${({ ringWidth = 2 }) => `${ringWidth}px`};
-    border-radius: 9999px;
-    background: ${({ gradient }) =>
-      gradient ?? "linear-gradient(90deg, #b7f3c7, #31c75f, #b7f3c7)"};
+    inset: ${({ $ringInset = 4 }) => `${$ringInset}px`};
+    padding: ${({ $ringWidth = 2 }) => `${$ringWidth}px`};
+    border-radius: 100px;
+    background: ${({ $gradient, $pokemonType }) => {
+      if ($gradient) return $gradient;
+      if (
+        $pokemonType &&
+        TYPE_GRADIENTS[$pokemonType as keyof typeof TYPE_GRADIENTS]
+      ) {
+        const [start, end] =
+          TYPE_GRADIENTS[$pokemonType as keyof typeof TYPE_GRADIENTS];
+        return `linear-gradient(90deg, ${start}, ${end}, ${start})`;
+      }
+      return "linear-gradient(90deg, #b7f3c7, #31c75f, #b7f3c7)"; // fallback verde
+    }};
     -webkit-mask: linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-    pointer-events: none;
+    z-index: -1;
   }
 `;
 
