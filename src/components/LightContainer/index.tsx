@@ -15,7 +15,7 @@ export const Light = () => {
   return (
     <div>
       <StyledContainer>
-        <Circle $background={bg} />
+        <Circle />
         <Circle $size={30} $innerSize={20} $background={bg} />
         <Circle $size={30} $innerSize={20} $background={bg} />
         <Circle $size={30} $innerSize={20} $background={bg} />

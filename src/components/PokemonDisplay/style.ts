@@ -11,8 +11,8 @@ type PokemonBackgroundProps = {
 
 export const DisplayWrap = styled.div`
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,15 +21,15 @@ export const DisplayWrap = styled.div`
 export const PokemonBackground = styled(Circle)<PokemonBackgroundProps>`
   position: absolute;
   inset: 0;
-  width: ${({ $size = 300 }) => `${$size}px`};
-  height: ${({ $size = 300 }) => `${$size}px`};
+  width: ${({ $size = 250 }) => `${$size}px`};
+  height: ${({ $size = 250 }) => `${$size}px`};
 
   &::after {
     content: "";
     display: block;
     border-radius: 50%;
-    width: ${({ $innerSize = 285 }) => `${$innerSize}px`};
-    height: ${({ $innerSize = 285 }) => `${$innerSize}px`};
+    width: ${({ $innerSize = 230 }) => `${$innerSize}px`};
+    height: ${({ $innerSize = 230 }) => `${$innerSize}px`};
     background: ${({ $innerBackground, $pokemonType }) => {
       if ($innerBackground) return $innerBackground;
       if (
@@ -47,7 +47,6 @@ export const PokemonBackground = styled(Circle)<PokemonBackgroundProps>`
 `;
 
 export const PokemonImage = styled.img`
-  position: relative;
-  max-width: 80%;
+  max-width: 100%;
   z-index: 1;
 `;

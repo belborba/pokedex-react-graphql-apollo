@@ -1,7 +1,8 @@
 import { StatusBar } from "@/components/StatusBar";
 import { BigScreen, DisplayWrap, Title, Text } from "../../style";
 import { useThemeContext } from "@/context/useThemeContext";
-import { usePokemon, type PokemonStat } from "@/hooks/usePokemon";
+import { usePokemon } from "@/hooks/usePokemon";
+import type { GetPokemonQuery } from "@/graphql/generated";
 
 export const PokemonStats = () => {
   const { pokemonName } = useThemeContext();
@@ -16,10 +17,10 @@ export const PokemonStats = () => {
         <Title>Stats</Title>
         <Text>
           {stats?.length ? (
-            stats.map((s: PokemonStat) => (
+            stats.map((s: GetPokemonQuery["pokemon"][0]["pokemonstats"][0]) => (
               <StatusBar
-                key={s.stat.name}
-                label={s.stat.name}
+                key={s.stat?.name}
+                label={s.stat?.name ?? "Unknown"}
                 value={s.base_stat}
               />
             ))

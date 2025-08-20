@@ -15,17 +15,16 @@ export const Pill = styled.div<PillProps>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 24px;
+  padding: 12px 12px;
   border-radius: 9999px;
   background: #fff;
   color: #333;
-  font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   box-shadow: 0px 0px 5px 0 #cfcfd9;
   margin: ${({ $margin }) =>
     typeof $margin === "number" ? `${$margin}px` : $margin || "0"};
   z-index: 1;
-  min-width: 120px;
+  min-width: 40%;
   text-align: center;
 
   &::before {

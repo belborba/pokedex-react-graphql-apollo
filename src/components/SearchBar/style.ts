@@ -7,19 +7,12 @@ export const ContainerWrap = styled.div<PropsWithChildren>`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 400px;
 `;
 
 export const SearchInput = styled(SmallScreen).attrs({ as: "input" })`
-  width: 100%;
-  padding: 20px 0px 20px 20px;
-  box-shadow: 3px 3px 16px 0 #94a3be inset, 0px 0px 4px rgba(194, 207, 230, 0.5);
+  padding: 15px 0px 15px 20px;
   outline: none;
-
-  &::placeholder {
-    color: #666;
-  }
+  width: 300px;
 `;
 
 export const SearchButton = styled.button`
@@ -27,8 +20,8 @@ export const SearchButton = styled.button`
   right: 12px;
   top: 50%;
   transform: translateY(-50%);
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: none;
   background: linear-gradient(to right, #89cff0, #0099cc);
@@ -38,8 +31,8 @@ export const SearchButton = styled.button`
   cursor: pointer;
 
   svg {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     fill: #fff;
   }
 

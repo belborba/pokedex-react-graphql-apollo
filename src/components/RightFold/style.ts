@@ -40,8 +40,8 @@ export const BigScreen = styled.div`
   justify-content: flex-start;
   border-radius: 24px;
   border: 5px solid #fff;
-  background: #e6edfa;
-  box-shadow: 3px 3px 16px 0 #94a3be inset, 0px 0px 4px rgba(194, 207, 230, 0.5);
+  background: #f2f4f8;
+  box-shadow: 3px 3px 16px 0 #bdc0c7 inset, 0px 0px 4px #bdc0c7;
   font-size: 16px;
   font-weight: 500;
   color: #333;
