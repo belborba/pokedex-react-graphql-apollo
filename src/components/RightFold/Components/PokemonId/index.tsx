@@ -1,13 +1,10 @@
 import { SmallScreen } from "@/components/Shared/SmallScreen";
-import { useThemeContext } from "@/context/useThemeContext";
-import { usePokemon } from "@/hooks/usePokemon";
+import { Id } from "./id";
 
 export const PokemonId = () => {
-  const { pokemonName } = useThemeContext();
-  const { loading, error, id } = usePokemon(pokemonName);
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
-
-  return <SmallScreen>No. {(id ?? 1).toString().padStart(3, "0")}</SmallScreen>;
+  return (
+    <SmallScreen>
+      <Id />
+    </SmallScreen>
+  );
 };
