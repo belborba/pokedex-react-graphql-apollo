@@ -1,15 +1,20 @@
 import styled from "styled-components";
 
+interface BigScreenProps {
+  height?: string; // "200px", "50vh", etc
+}
+
 export const DisplayWrap = styled.div`
   position: relative;
 `;
 
-export const BigScreen = styled.div`
+export const BigScreen = styled.div<BigScreenProps>`
   position: relative;
   display: flex;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   border-radius: 24px;
   border: 5px solid #fff;
   background: #f2f4f8;
@@ -17,9 +22,29 @@ export const BigScreen = styled.div`
   font-size: 16px;
   font-weight: 500;
   color: #333;
+  height: ${(props) => props.height || "auto"};
+
+  /* Estilização da scrollbar */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 190, 0.3);
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 163, 190, 0.5);
+  }
 `;
 
 export const Title = styled.h3`
+  position: absolute;
   background: #ffffff;
   width: fit-content;
   border-radius: 24px 0px 100px 0px;
@@ -30,7 +55,7 @@ export const Title = styled.h3`
   box-shadow: 7px 7px 10px rgba(148, 163, 190, 0.5);
 `;
 
-export const Text = styled.div`
+export const Content = styled.div`
   font-size: 14px;
   color: #333;
   line-height: 1.5;

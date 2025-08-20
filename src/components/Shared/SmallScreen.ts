@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const SmallScreen = styled.div`
+interface SmallScreenProps {
+  width?: string;
+}
+
+export const SmallScreen = styled.div<SmallScreenProps>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -12,6 +16,9 @@ export const SmallScreen = styled.div`
   font-size: 16px;
   color: #333;
   white-space: wrap;
+  width: ${(props) => props.width || "auto"};
+  height: 24px;
+
   img {
     display: block;
     height: auto;

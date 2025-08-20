@@ -8,9 +8,11 @@ import { PokemonId } from "./Components/PokemonId";
 export const RightFold = () => {
   return (
     <RightContainer>
-      <div>
+      <div style={{ display: "flex", gap: "0.5rem" }}>
         <SmallScreen>Database</SmallScreen>
-        <PokemonId />
+        <SmallScreen width="60px">
+          <PokemonId />
+        </SmallScreen>
       </div>
       <PokemonDescription />
       <PokemonStats />

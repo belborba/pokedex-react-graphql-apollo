@@ -1,12 +1,11 @@
-import { BigScreenContainer } from "@/components/BigScreen";
-import { Title } from "../../style";
 import { Family } from "./family";
+import { BigScreen, Title } from "@/components/Shared/BigScreen";
 
 export const PokemonFamily = () => {
   return (
-    <BigScreenContainer>
+    <BigScreen>
       <Title>Evolution Family</Title>
       <Family />
-    </BigScreenContainer>
+    </BigScreen>
   );
 };

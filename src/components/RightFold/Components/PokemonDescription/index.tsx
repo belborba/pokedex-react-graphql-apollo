@@ -1,12 +1,11 @@
-import { BigScreenContainer } from "@/components/BigScreen";
 import { Description } from "./description";
-import { Title } from "../../style";
+import { BigScreen, Title } from "@/components/Shared/BigScreen";
 
 export const PokemonDescription = () => {
   return (
-    <BigScreenContainer>
+    <BigScreen>
       <Title>Description</Title>
       <Description />
-    </BigScreenContainer>
+    </BigScreen>
   );
 };
