@@ -43,7 +43,7 @@ export const Pill = styled.div<PillProps>`
           TYPE_GRADIENTS[$pokemonType as keyof typeof TYPE_GRADIENTS];
         return `linear-gradient(90deg, ${start}, ${end}, ${start})`;
       }
-      return "linear-gradient(90deg, #b7f3c7, #31c75f, #b7f3c7)"; // fallback verde
+      return "linear-gradient(90deg,#c7c7c7,#4e4e4e,#c7c7c7)"; // fallback
     }};
     -webkit-mask: linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);

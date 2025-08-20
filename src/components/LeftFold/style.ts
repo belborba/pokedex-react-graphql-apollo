@@ -11,4 +11,5 @@ export const ContainerTypes = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
+  height: 50px;
 `;

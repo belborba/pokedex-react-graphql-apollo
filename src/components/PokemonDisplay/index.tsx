@@ -1,19 +1,27 @@
 import { DisplayWrap, PokemonImage, PokemonBackground } from "./style";
 import { useThemeContext } from "@/context/useThemeContext";
 import { usePokemon } from "@/hooks/usePokemon";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export function PokemonDisplay() {
   const { pokemonName } = useThemeContext();
   const { loading, error, type, sprite } = usePokemon(pokemonName);
 
-  if (loading) return <p>Loading...</p>; // ou pode colocar um skeleton
-  if (error) return <p>Error: {error.message}</p>;
-  if (!sprite) return null; // garante que não renderiza nada sem sprite
+  // if (!sprite) return null; // garante que não renderiza nada sem sprite
 
   return (
     <DisplayWrap>
+      {loading && (
+        <DotLottieReact
+          style={{ width: "30px", height: "30px" }}
+          src="https://lottie.host/3c062dba-46ca-4470-93f8-b811143f22fe/YDf72lc8s3.lottie"
+          loop
+          autoplay
+        />
+      )}
       <PokemonBackground $pokemonType={type} />
-      <PokemonImage src={sprite} alt="Pokémon" />
+      {error && <p>Error: {error.message}</p>}
+      {!loading && <PokemonImage src={sprite} alt="Pokémon" />}
     </DisplayWrap>
   );
 }

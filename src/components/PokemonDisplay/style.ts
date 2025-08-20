@@ -40,7 +40,7 @@ export const PokemonBackground = styled(Circle)<PokemonBackgroundProps>`
           TYPE_GRADIENTS[$pokemonType as keyof typeof TYPE_GRADIENTS];
         return `linear-gradient(to bottom, ${start}, ${end})`;
       }
-      return "linear-gradient(to bottom, #D3E7D8, #5DBF66)"; // fallback verde
+      return "linear-gradient(to bottom,#cecece,#aeaeae)"; // fallback verde
     }};
     margin: auto;
   }

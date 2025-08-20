@@ -13,7 +13,7 @@ export const Label = styled.span`
 `;
 
 export const BarContainer = styled.div`
-  flex: 1;
+  width: 400px;
   height: 8px;
   background: #e6edfa;
   border-radius: 50px;

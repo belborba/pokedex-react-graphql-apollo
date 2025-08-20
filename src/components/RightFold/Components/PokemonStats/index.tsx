@@ -1,11 +1,13 @@
 import { Stats } from "./stats";
-import { BigScreen, Title } from "@/components/Shared/BigScreen";
+import { BigScreen, Content, Title } from "@/components/Shared/BigScreen";
 
 export const PokemonStats = () => {
   return (
-    <BigScreen>
+    <BigScreen height="140px">
       <Title>Stats</Title>
-      <Stats />
+      <Content>
+        <Stats />
+      </Content>
     </BigScreen>
   );
 };
