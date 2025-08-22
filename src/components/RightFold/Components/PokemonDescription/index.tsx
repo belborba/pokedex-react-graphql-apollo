@@ -1,11 +1,12 @@
 import { Description } from "./description";
-import { BigScreen, Title } from "@/components/Shared/BigScreen";
+import { BigScreen } from "@/components/BigScreen";
 
 export const PokemonDescription = () => {
   return (
-    <BigScreen height="120px">
-      <Title>Description</Title>
-      <Description />
-    </BigScreen>
+    <>
+      <BigScreen height="120px" title="Description">
+        <Description />
+      </BigScreen>
+    </>
   );
 };

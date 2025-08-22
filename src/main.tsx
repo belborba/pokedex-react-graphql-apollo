@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import "./index.css";
 import App from "./App.tsx";
-import { ThemeProvider } from "./context/themeContext";
+import { ThemeProvider } from "./context/Pokemon/Provider/index.tsx";
 
 // Aqui você configura o Apollo Client
 const client = new ApolloClient({

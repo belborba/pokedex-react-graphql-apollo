@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { TYPE_GRADIENTS } from "@/constants/pokemonTypes";
-import { useThemeContext } from "@/context/useThemeContext";
+import { useThemeContext } from "@/context/Pokemon";
 import { usePokemon } from "@/hooks/usePokemon";
 import { Wrapper, Label, BarContainer, BarFill, Value } from "./style";
 

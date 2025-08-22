@@ -5,12 +5,12 @@ import {
   type SetStateAction,
 } from "react";
 
-interface ThemeContextType {
+interface PokemonContext {
   pokemonName: string;
   setPokemonName: Dispatch<SetStateAction<string>>;
 }
 
-export const ThemeContext = createContext<ThemeContextType | undefined>(
+export const ThemeContext = createContext<PokemonContext | undefined>(
   undefined
 );
 

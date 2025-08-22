@@ -1,5 +1,5 @@
 import { DisplayWrap, PokemonImage, PokemonBackground } from "./style";
-import { useThemeContext } from "@/context/useThemeContext";
+import { useThemeContext } from "@/context/Pokemon";
 import { usePokemon } from "@/hooks/usePokemon";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 

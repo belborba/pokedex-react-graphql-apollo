@@ -1,6 +1,6 @@
 import { ContainerWrap, SearchButton, SearchInput } from "./style";
 import { useState } from "react";
-import { useThemeContext } from "@/context/useThemeContext";
+import { useThemeContext } from "@/context/Pokemon";
 
 export function SearchBar() {
   const { setPokemonName } = useThemeContext();

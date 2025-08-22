@@ -1,5 +1,5 @@
 import { StatusBar } from "@/components/StatusBar";
-import { useThemeContext } from "@/context/useThemeContext";
+import { useThemeContext } from "@/context/Pokemon";
 import type { GetPokemonQuery } from "@/graphql/generated";
 import { usePokemon } from "@/hooks/usePokemon";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";

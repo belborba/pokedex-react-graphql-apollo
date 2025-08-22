@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const Container = styled.div`
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -28,7 +28,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const Card = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

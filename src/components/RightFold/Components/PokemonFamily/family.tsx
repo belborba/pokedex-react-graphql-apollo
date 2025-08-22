@@ -1,6 +1,6 @@
 import { Evolutions } from "@/components/EvolutionsRender";
 import { Content } from "@/components/Shared/BigScreen";
-import { useThemeContext } from "@/context/useThemeContext";
+import { useThemeContext } from "@/context/Pokemon";
 import { usePokemon } from "@/hooks/usePokemon";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 

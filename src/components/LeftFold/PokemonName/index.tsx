@@ -1,5 +1,5 @@
 import { Pill } from "../../Shared/PillPop";
-import { useThemeContext } from "@/context/useThemeContext";
+import { useThemeContext } from "@/context/Pokemon";
 import { usePokemon } from "@/hooks/usePokemon";
 
 type PokemonNameProps = {

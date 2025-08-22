@@ -1,4 +1,4 @@
-import { useThemeContext } from "@/context/useThemeContext";
+import { useThemeContext } from "@/context/Pokemon";
 import { usePokemon } from "@/hooks/usePokemon";
 import { SmallScreen } from "@/components/Shared/SmallScreen";
 import { TYPE_ICONS } from "@/constants/pokemonIcons";

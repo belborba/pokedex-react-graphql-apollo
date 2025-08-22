@@ -1,6 +1,6 @@
 import { StyledContainer } from "./style";
 import { Circle } from "../Shared/Circle";
-import { useThemeContext } from "@/context/useThemeContext";
+import { useThemeContext } from "@/context/Pokemon";
 import { usePokemon } from "@/hooks/usePokemon";
 import { TYPE_GRADIENTS } from "@/constants/pokemonTypes";
 

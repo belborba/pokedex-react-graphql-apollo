@@ -1,4 +1,4 @@
-import { Card, Wrapper } from "./style";
+import { Wrapper, Container } from "./style";
 
 type Evolution = {
   name: string;
@@ -16,14 +16,24 @@ export const Evolutions: React.FC<EvolutionsProps> = ({ evolutions }) => {
   // Se não tiver nenhuma evolução com imagem, não renderiza nada
   if (validEvolutions.length === 0) return null;
 
+  // const handleImgClick = (e: React.FormEvent) => {
+  //   if (inputValue !== "") {
+  //     setPokemonName(inputValue.toLowerCase()); // seta no context
+  //   }
+  // };
+
   return (
-    <Wrapper>
+    <Container>
       {validEvolutions.map((evo, index) => (
-        <Card key={index}>
-          <img src={evo.image!} alt={evo.name} />
+        <Wrapper key={index}>
+          <img
+            // onClick={() => handleImgClick(evo.name)}
+            src={evo.image!}
+            alt={evo.name}
+          />
           <span>{evo.name}</span>
-        </Card>
+        </Wrapper>
       ))}
-    </Wrapper>
+    </Container>
   );
 };
