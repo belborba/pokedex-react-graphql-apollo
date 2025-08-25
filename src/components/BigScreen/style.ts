@@ -8,12 +8,12 @@ export const BigScreenContainer = styled.div<BigScreenProps>`
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border-radius: 24px;
   border: 5px solid #fff;
   background: #f2f4f8;
   box-shadow: 3px 3px 16px 0 #bdc0c7 inset, 0px 0px 4px #bdc0c7;
-  font-size: 16px;
-  color: #333;
   height: ${(props) => props.$height || "auto"};
 
   /* Estilização da scrollbar */
@@ -36,6 +36,9 @@ export const BigScreenContainer = styled.div<BigScreenProps>`
 `;
 
 export const Title = styled.h3`
+  left: 0;
+  top: 0;
+  position: absolute;
   background: #ffffff;
   width: fit-content;
   border-radius: 24px 0px 100px 0px;
@@ -47,13 +50,8 @@ export const Title = styled.h3`
 `;
 
 export const Content = styled.div`
+  margin-top: 20px;
+  padding: 20px;
   font-size: 14px;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  justify-content: center;
-  padding: 10px;
-  flex-wrap: wrap;
-  max-width: 90%;
+  max-width: 100%;
 `;

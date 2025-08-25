@@ -1,9 +1,9 @@
+import { BigScreen } from "@/components/BigScreen";
 import { Stats } from "./stats";
-import { BigScreen } from "@/components/Shared/BigScreen";
 
 export const PokemonStats = () => {
   return (
-    <BigScreen height="140px" title="Stats">
+    <BigScreen height="150px" title="Stats">
       <Stats />
     </BigScreen>
   );
