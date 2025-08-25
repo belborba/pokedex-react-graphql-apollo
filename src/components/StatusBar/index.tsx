@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { TYPE_GRADIENTS } from "@/constants/pokemonTypes";
-import { useThemeContext } from "@/context/Pokemon";
-import { usePokemon } from "@/hooks/usePokemon";
 import { Wrapper, Label, BarContainer, BarFill, Value } from "./style";
 
 interface StatusBarProps {
   label: string;
   value: number;
+  types: string;
 }
 
-export const StatusBar: React.FC<StatusBarProps> = ({ label, value }) => {
-  const { pokemonName } = useThemeContext();
-  const { type } = usePokemon(pokemonName);
-
-  const [start, end] = type
-    ? TYPE_GRADIENTS[type as keyof typeof TYPE_GRADIENTS]
+export const StatusBar: React.FC<StatusBarProps> = ({
+  label,
+  value,
+  types,
+}) => {
+  const [start, end] = types
+    ? TYPE_GRADIENTS[types as keyof typeof TYPE_GRADIENTS]
     : ["#ddd", "#aaa"];
 
   const [displayValue, setDisplayValue] = useState(0);
@@ -25,7 +25,7 @@ export const StatusBar: React.FC<StatusBarProps> = ({ label, value }) => {
       20
     );
     return () => clearTimeout(id);
-  }, [value, type]);
+  }, [value, types]);
 
   return (
     <Wrapper>

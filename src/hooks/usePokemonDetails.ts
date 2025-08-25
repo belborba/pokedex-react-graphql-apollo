@@ -1,19 +1,25 @@
-// src/hooks/usePokemonDetails.ts
 import { useQuery, useReactiveVar } from "@apollo/client";
 import { GET_POKEMON } from "@/graphql/pokemon";
 import { pokemonNameVar } from "@/graphql/reactiveVars";
+
+let lastValidPokemon: any = null;
 
 export function usePokemonDetails() {
   const pokemonName = useReactiveVar(pokemonNameVar);
 
   const { data, loading, error } = useQuery(GET_POKEMON, {
     variables: { name: pokemonName },
-    skip: !pokemonName, // não dispara a query se o nome estiver vazio
+    skip: !pokemonName,
+    onCompleted: (data) => {
+      if (data?.pokemon?.[0]) {
+        lastValidPokemon = data.pokemon[0]; // guarda o último válido
+      }
+    },
   });
 
-  const pokemon = data?.pokemon?.[0];
-  const id = pokemon?.id;
+  const pokemon = data?.pokemon?.[0] || lastValidPokemon;
 
+  const id = pokemon?.id;
   const flavorText =
     pokemon?.pokemonspecy?.pokemonspeciesflavortexts?.[0]?.flavor_text || "";
   const sprite =
@@ -29,9 +35,10 @@ export function usePokemonDetails() {
       image: s.pokemons?.[0]?.pokemonsprites?.[0]?.sprites || null,
     })) || [];
 
+  // 👇 aqui: se não tiver `data`, usa o último válido
   return {
     id,
-    pokemonName,
+    pokemonName: pokemon?.name || "",
     evolutions,
     flavorText,
     sprite,

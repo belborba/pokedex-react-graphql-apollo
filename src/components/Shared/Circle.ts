@@ -14,7 +14,7 @@ export const Circle = styled.div<CircleProps>`
   background: #eff5ff;
   border-radius: 50%;
   position: relative;
-  box-shadow: 3px 3px 16px 0 #ffffff inset, 0px 0px 5px rgba(133, 145, 166, 0.5);
+  box-shadow: 3px 3px 16px 0 #ffffff inset, 0px 0px 5px #8591a690;
 
   &::after {
     content: "";

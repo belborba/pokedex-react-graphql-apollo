@@ -7,16 +7,9 @@ export function PokemonDisplay() {
   // Pega apenas o primeiro tipo
   const firstType = types?.[0] ?? null;
 
-  // Usa o primeiro tipo para buscar o gradiente
-  const [start, end] = firstType
-    ? TYPE_GRADIENTS[firstType as keyof typeof TYPE_GRADIENTS]
-    : ["#89cff0", "#0099cc"];
-
-  const bg = `linear-gradient(to bottom, ${start}, ${end})`;
-
   return (
     <DisplayWrap>
-      <PokemonBackground $pokemonType={types} />
+      <PokemonBackground $pokemonType={firstType} />
       {!loading && <PokemonImage src={sprite} alt="Pokémon" />}
     </DisplayWrap>
   );

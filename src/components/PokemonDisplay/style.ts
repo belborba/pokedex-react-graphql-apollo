@@ -30,8 +30,7 @@ export const PokemonBackground = styled(Circle)<PokemonBackgroundProps>`
     border-radius: 50%;
     width: ${({ $innerSize = 230 }) => `${$innerSize}px`};
     height: ${({ $innerSize = 230 }) => `${$innerSize}px`};
-    background: ${({ $innerBackground, $pokemonType }) => {
-      if ($innerBackground) return $innerBackground;
+    background: ${({ $pokemonType }) => {
       if (
         $pokemonType &&
         TYPE_GRADIENTS[$pokemonType as keyof typeof TYPE_GRADIENTS]
@@ -40,7 +39,7 @@ export const PokemonBackground = styled(Circle)<PokemonBackgroundProps>`
           TYPE_GRADIENTS[$pokemonType as keyof typeof TYPE_GRADIENTS];
         return `linear-gradient(to bottom, ${start}, ${end})`;
       }
-      return "linear-gradient(to bottom,#cecece,#aeaeae)"; // fallback verde
+      return "linear-gradient(to bottom, #c7c7c7, #4e4e4e)"; // fallback
     }};
     margin: auto;
   }

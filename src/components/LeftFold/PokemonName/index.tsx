@@ -8,7 +8,6 @@ type PokemonNameProps = {
 export const PokemonName = ({ margin }: PokemonNameProps) => {
   const { pokemonName, types } = usePokemonDetails();
 
-  // Pega apenas o primeiro tipo
   const firstType = types?.[0] ?? null;
 
   const displayName = pokemonName
