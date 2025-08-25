@@ -1,16 +1,15 @@
 import { ContainerWrap, SearchButton, SearchInput } from "./style";
 import { useState } from "react";
-import { useThemeContext } from "@/context/Pokemon";
+import { pokemonNameVar } from "@/graphql/reactiveVars";
 
 export function SearchBar() {
-  const { setPokemonName } = useThemeContext();
   const [inputValue, setInputValue] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (inputValue.trim() !== "") {
-      setPokemonName(inputValue.toLowerCase()); // seta no context
-      setInputValue(""); // limpa o input se quiser
+      pokemonNameVar(inputValue.toLowerCase()); // atualiza reactive var do Apollo
+      setInputValue(""); // limpa o input
     }
   };
 

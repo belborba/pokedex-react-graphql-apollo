@@ -1,26 +1,22 @@
 import { DisplayWrap, PokemonImage, PokemonBackground } from "./style";
-import { useThemeContext } from "@/context/Pokemon";
-import { usePokemon } from "@/hooks/usePokemon";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { usePokemonDetails } from "@/hooks/usePokemonDetails";
 
 export function PokemonDisplay() {
-  const { pokemonName } = useThemeContext();
-  const { loading, error, type, sprite } = usePokemon(pokemonName);
+  const { loading, types, sprite } = usePokemonDetails();
 
-  // if (!sprite) return null; // garante que não renderiza nada sem sprite
+  // Pega apenas o primeiro tipo
+  const firstType = types?.[0] ?? null;
+
+  // Usa o primeiro tipo para buscar o gradiente
+  const [start, end] = firstType
+    ? TYPE_GRADIENTS[firstType as keyof typeof TYPE_GRADIENTS]
+    : ["#89cff0", "#0099cc"];
+
+  const bg = `linear-gradient(to bottom, ${start}, ${end})`;
 
   return (
     <DisplayWrap>
-      {loading && (
-        <DotLottieReact
-          style={{ width: "30px", height: "30px" }}
-          src="https://lottie.host/3c062dba-46ca-4470-93f8-b811143f22fe/YDf72lc8s3.lottie"
-          loop
-          autoplay
-        />
-      )}
-      <PokemonBackground $pokemonType={type} />
-      {error && <p>Error: {error.message}</p>}
+      <PokemonBackground $pokemonType={types} />
       {!loading && <PokemonImage src={sprite} alt="Pokémon" />}
     </DisplayWrap>
   );

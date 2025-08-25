@@ -1,10 +1,7 @@
 import { Evolutions } from "@/components/EvolutionsRender";
-import { useThemeContext } from "@/context/Pokemon";
-import { usePokemon } from "@/hooks/usePokemon";
+import { usePokemonDetails } from "@/hooks/usePokemonDetails";
 
 export const Family = () => {
-  const { pokemonName } = useThemeContext();
-  const { evolutions } = usePokemon(pokemonName);
-
+  const { evolutions } = usePokemonDetails();
   return <Evolutions evolutions={evolutions} />;
 };

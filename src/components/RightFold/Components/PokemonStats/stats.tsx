@@ -1,12 +1,10 @@
 import { Content } from "@/components/BigScreen/style";
 import { StatusBar } from "@/components/StatusBar";
-import { useThemeContext } from "@/context/Pokemon";
+import { usePokemonDetails } from "@/hooks/usePokemonDetails";
 import type { GetPokemonQuery } from "@/graphql/generated";
-import { usePokemon } from "@/hooks/usePokemon";
 
 export const Stats = () => {
-  const { pokemonName } = useThemeContext();
-  const { stats } = usePokemon(pokemonName);
+  const { stats } = usePokemonDetails();
 
   return (
     <Content>
