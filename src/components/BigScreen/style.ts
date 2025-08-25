@@ -49,8 +49,11 @@ export const Title = styled.h3`
 export const Content = styled.div`
   font-size: 14px;
   color: #333;
+  display: flex;
+  flex-direction: column;
   align-self: center;
   justify-content: center;
-  margin-top: 10px;
+  padding: 10px;
+  flex-wrap: wrap;
   max-width: 90%;
 `;
