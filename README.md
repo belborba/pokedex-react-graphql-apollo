@@ -1,69 +1,108 @@
-# React + TypeScript + Vite
+# Pokédex React (GraphQL + Apollo)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Pokédex simulation app built with **React**, powered by **GraphQL** data (https://pokeapi.co/docs/graphql) fetching using **Apollo Client**, with a user interface fully designed by the author.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5.4.0-646CFF?logo=vite&logoColor=white)
+![Apollo Client](https://img.shields.io/badge/Apollo%20Client-3.9.0-311C87?logo=apollographql&logoColor=white)
+![GraphQL](https://img.shields.io/badge/GraphQL-16.9.0-E10098?logo=graphql&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.5.0-3178C6?logo=typescript&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+* Fetches and displays Pokémon data through **GraphQL** and **Apollo Client**
+* Built with **React** for a modern, reactive frontend experience
+* Structured with clear and reusable components and hooks
+* **Custom-designed interface**, tailored for an immersive Pokédex feel
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+
+## Technologies Used
+
+| Technology    | Purpose                                          |
+| ------------- | ------------------------------------------------ |
+| React         | Frontend library for building the user interface |
+| TypeScript    | Strongly typed JavaScript for more robust coding |
+| Vite          | Fast build tool and development server           |
+| Apollo Client | GraphQL client for querying and managing data    |
+| GraphQL       | Flexible, efficient data query language          |
+| ESLint        | Code linting to maintain quality and consistency |
+
+
+## Project Structure *(optional)*
+
+```
+src/
+├── components/
+│   └── [ComponentName].tsx
+├── hooks/
+│   └── usePokemon.ts
+├── pages/
+│   └── [PageName].tsx
+├── styles/
+│   └── style.ts
+├── App.tsx
+└── main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Use imports like:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```tsx
+import { usePokemon } from "@/hooks/usePokemon";
+import { BigScreenContainer } from "./styles";
 ```
+
+
+## Setup & Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/belborba/pokedex-react-graphql-apollo.git
+   cd pokedex-react-graphql-apollo
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+
+   ```bash
+   npm run dev
+   ```
+
+   Your app should now be available at `http://localhost:5173` (or similar).
+
+
+## Usage
+
+Once the project is running locally:
+
+* Browse Pokémon list
+* Click on a Pokémon to view details (e.g., stats, types, images)
+* Search or filter Pokémon (if implemented)
+* Interact with UI elements—designed for both desktop and mobile experiences
+
+
+## Custom Design
+
+The entire UI was designed from scratch by me, focusing on:
+
+* Clean and intuitive layout
+* Pleasant typography and color scheme
+* Responsive components for various screen sizes
+* Consistent design system across components
+
+---
+
+## License
+
+This project is open source, and available under the **MIT License**.
+
