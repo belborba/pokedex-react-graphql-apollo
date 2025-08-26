@@ -1,10 +1,10 @@
 import { SmallScreen } from "@/components/Shared/SmallScreen";
 import { TYPE_ICONS } from "@/constants/pokemonIcons";
 import { Loading } from "@/components/Loading";
-import { usePokemonDetails } from "@/hooks/usePokemonDetails";
+import { usePokemon } from "@/hooks/usePokemon";
 
 export function PokemonTypes() {
-  const { loading, types } = usePokemonDetails();
+  const { loading, types } = usePokemon();
 
   if (loading) return <Loading />;
 

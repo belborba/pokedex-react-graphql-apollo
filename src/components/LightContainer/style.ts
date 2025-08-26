@@ -34,7 +34,7 @@ export const StyledContainer = styled.div`
     left: -3%;
     width: 104%;
     height: 100%;
-    background-color: #f2f4f8;
+    background-color: #fff;
     clip-path: shape(
       from 82.71% 88%,
       curve to 76.04% 100% with 81.43% 95.83%/78.85% 100%,

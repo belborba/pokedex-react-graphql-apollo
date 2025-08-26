@@ -12,7 +12,7 @@ const moveGradient = keyframes`
   }
 `;
 
-export const GradientBar = styled.div`
+export const GradientLine = styled.div`
   width: 100%;
   height: 6px;
   background: linear-gradient(

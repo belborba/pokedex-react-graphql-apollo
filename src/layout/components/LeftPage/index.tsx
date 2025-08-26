@@ -1,14 +1,12 @@
 import { LeftFold } from "@/components/LeftFold";
-import { Container, StyledCard } from "./style";
 import { Light } from "@/components/LightContainer";
+import { LeftContainer } from "./style";
 
 export const LeftPage = () => {
   return (
-    <StyledCard>
-      <Container>
-        <Light />
-        <LeftFold />
-      </Container>
-    </StyledCard>
+    <LeftContainer>
+      <Light />
+      <LeftFold />
+    </LeftContainer>
   );
 };

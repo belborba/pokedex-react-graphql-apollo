@@ -1,7 +1,7 @@
-import { usePokemonDetails } from "@/hooks/usePokemonDetails";
+import { usePokemon } from "@/hooks/usePokemon";
 
 export const Id = () => {
-  const { id } = usePokemonDetails();
+  const { id } = usePokemon();
 
   return <p>No. {(id ?? "...").toString().padStart(3, "0")}</p>;
 };

@@ -1,8 +1,8 @@
 import { Content } from "@/components/BigScreen/style";
-import { usePokemonDetails } from "@/hooks/usePokemonDetails";
+import { usePokemon } from "@/hooks/usePokemon";
 
 export const Description = () => {
-  const { flavorText } = usePokemonDetails();
+  const { flavorText } = usePokemon();
 
   return <Content>{flavorText}</Content>;
 };

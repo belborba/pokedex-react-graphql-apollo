@@ -1,7 +1,10 @@
 import styled from "styled-components";
-import { Card } from "../../../components/Card";
 
-export const StyledCard = styled(Card)`
+export const RightContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 1rem;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   border-left: 2px solid #e4ebf5;
@@ -60,31 +63,10 @@ export const StyledCard = styled(Card)`
   );
 `;
 
-export const Container = styled.div`
+export const RightWrap = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  height: 635px;
+  height: 640px;
   width: 420px;
-  overflow-y: auto;
-  overflow-x: hidden;
-
-  /* Estilização da scrollbar */
-  &::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 4px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: #c1c1c1;
-    border-radius: 4px;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background: #a8a8a8;
-  }
 `;

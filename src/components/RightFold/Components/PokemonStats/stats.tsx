@@ -1,10 +1,10 @@
 import { Content } from "@/components/BigScreen/style";
-import { StatusBar } from "@/components/StatusBar";
-import { usePokemonDetails } from "@/hooks/usePokemonDetails";
+import { StatusBar } from "@/components/RightFold/Components/StatusBar";
 import type { GetPokemonQuery } from "@/graphql/generated";
+import { usePokemon } from "@/hooks/usePokemon";
 
 export const Stats = () => {
-  const { stats, types } = usePokemonDetails();
+  const { stats, types } = usePokemon();
 
   // Pega apenas o primeiro tipo
   const firstType = types?.[0] ?? null;

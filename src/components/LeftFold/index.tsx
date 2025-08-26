@@ -1,5 +1,5 @@
-import { PokemonDisplay } from "../PokemonDisplay";
-import { SearchBar } from "../SearchBar";
+import { PokemonDisplay } from "./PokemonDisplay";
+import { SearchBar } from "./SearchBar";
 import { LineDivider } from "../Shared/LineDivider";
 import { Container, ContainerTypes } from "./style";
 import { PokemonName } from "./PokemonName";

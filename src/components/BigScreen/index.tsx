@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { BigScreenContainer, Title, Content } from "./style";
 import { Loading } from "../Loading";
-import { usePokemonDetails } from "@/hooks/usePokemonDetails";
+import { usePokemon } from "@/hooks/usePokemon";
 
 interface BigScreenProps {
   title: string;
@@ -10,7 +10,7 @@ interface BigScreenProps {
 }
 
 export function BigScreen({ title, height, children }: BigScreenProps) {
-  const { loading } = usePokemonDetails();
+  const { loading } = usePokemon();
 
   return (
     <BigScreenContainer $height={height}>

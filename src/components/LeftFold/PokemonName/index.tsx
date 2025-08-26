@@ -1,4 +1,4 @@
-import { usePokemonDetails } from "@/hooks/usePokemonDetails";
+import { usePokemon } from "@/hooks/usePokemon";
 import { Pill } from "../../Shared/PillPop";
 
 type PokemonNameProps = {
@@ -6,13 +6,11 @@ type PokemonNameProps = {
 };
 
 export const PokemonName = ({ margin }: PokemonNameProps) => {
-  const { pokemonName, types } = usePokemonDetails();
+  const { name, types } = usePokemon();
 
   const firstType = types?.[0] ?? null;
 
-  const displayName = pokemonName
-    ? pokemonName[0].toUpperCase() + pokemonName.slice(1)
-    : "Pokémon";
+  const displayName = name ? name[0].toUpperCase() + name.slice(1) : "Pokémon";
 
   return (
     <Pill $margin={margin ?? "-40px 0 0 0"} $pokemonType={firstType}>

@@ -1,6 +1,6 @@
+import { SmallScreen } from "@/components/Shared/SmallScreen";
 import type { PropsWithChildren } from "react";
 import styled from "styled-components";
-import { SmallScreen } from "../Shared/SmallScreen";
 
 export const ContainerWrap = styled.div<PropsWithChildren>`
   position: relative;
@@ -39,4 +39,10 @@ export const SearchButton = styled.button`
   &:hover {
     opacity: 0.9;
   }
+`;
+
+export const Content = styled.p`
+  font-size: 14px;
+  margin: -10px;
+  color: #707070;
 `;

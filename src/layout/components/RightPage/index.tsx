@@ -1,12 +1,12 @@
 import { RightFold } from "@/components/RightFold";
-import { Container, StyledCard } from "./style";
+import { RightWrap, RightContainer } from "./style";
 
 export const RightPage = () => {
   return (
-    <StyledCard>
-      <Container>
+    <RightContainer>
+      <RightWrap>
         <RightFold />
-      </Container>
-    </StyledCard>
+      </RightWrap>
+    </RightContainer>
   );
 };

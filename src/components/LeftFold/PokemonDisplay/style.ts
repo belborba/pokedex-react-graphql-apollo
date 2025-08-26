@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Circle } from "../Shared/Circle";
 import { TYPE_GRADIENTS } from "@/constants/pokemonTypes";
+import { Circle } from "@/components/Shared/Circle";
 
 type PokemonBackgroundProps = {
   $size?: number;

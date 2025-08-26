@@ -1,4 +1,3 @@
-// src/graphql/reactiveVars.ts
 import { makeVar } from "@apollo/client";
 import type { GetPokemonQuery } from "./generated";
 

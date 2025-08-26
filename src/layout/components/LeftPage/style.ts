@@ -1,11 +1,8 @@
 import styled from "styled-components";
-import { Card } from "@/components/Card";
 
-export const StyledCard = styled(Card)`
-  border-bottom-right-radius: 0;
-`;
-
-export const Container = styled.div`
+export const LeftContainer = styled.div`
+  background-color: #fff;
+  border-radius: 20px 20px 0px 20px;
   display: flex;
   flex-direction: column;
   gap: 3rem;

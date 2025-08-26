@@ -1,8 +1,8 @@
+import { usePokemon } from "@/hooks/usePokemon";
 import { DisplayWrap, PokemonImage, PokemonBackground } from "./style";
-import { usePokemonDetails } from "@/hooks/usePokemonDetails";
 
 export function PokemonDisplay() {
-  const { loading, types, sprite } = usePokemonDetails();
+  const { loading, types, sprite } = usePokemon();
 
   // Pega apenas o primeiro tipo
   const firstType = types?.[0] ?? null;

@@ -1,10 +1,10 @@
 import { StyledContainer } from "./style";
 import { Circle } from "../Shared/Circle";
 import { TYPE_GRADIENTS } from "@/constants/pokemonTypes";
-import { usePokemonDetails } from "@/hooks/usePokemonDetails";
+import { usePokemon } from "@/hooks/usePokemon";
 
 export const Light = () => {
-  const { types } = usePokemonDetails();
+  const { types } = usePokemon();
 
   // Pega apenas o primeiro tipo
   const firstType = types?.[0] ?? null;
