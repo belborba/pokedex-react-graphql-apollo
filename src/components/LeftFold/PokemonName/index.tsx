@@ -13,7 +13,7 @@ export const PokemonName = ({ margin }: PokemonNameProps) => {
   const displayName = name ? name[0].toUpperCase() + name.slice(1) : "Pokémon";
 
   return (
-    <Pill $margin={margin ?? "-40px 0 0 0"} $pokemonType={firstType}>
+    <Pill $margin={margin ?? "-10px 0 0 0"} $pokemonType={firstType}>
       {displayName}
     </Pill>
   );

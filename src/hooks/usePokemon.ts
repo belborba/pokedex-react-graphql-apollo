@@ -1,5 +1,5 @@
 import { useQuery, useReactiveVar } from "@apollo/client";
-import { GET_POKEMON } from "@/graphql/pokemon";
+import { GET_POKEMON } from "@/graphql/getPokemon";
 import { pokemonNameVar, pokemonDataVar } from "@/graphql/reactiveVars";
 import { useEffect, useState } from "react";
 import type {

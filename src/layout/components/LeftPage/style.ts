@@ -6,6 +6,6 @@ export const LeftContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  height: 680px;
+  height: 710px;
   width: 420px;
 `;

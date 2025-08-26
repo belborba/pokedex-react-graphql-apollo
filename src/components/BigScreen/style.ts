@@ -52,6 +52,8 @@ export const Title = styled.h3`
 
 export const Content = styled.div`
   margin-top: 20px;
+  justify-self: center;
+  align-self: center;
   font-size: 14px;
   width: 100%;
 `;

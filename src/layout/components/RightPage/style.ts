@@ -67,6 +67,6 @@ export const RightWrap = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  height: 640px;
+  height: 660px;
   width: 420px;
 `;

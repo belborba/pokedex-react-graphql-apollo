@@ -4,9 +4,7 @@ export const LayoutStyle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding: 20px;
-  overflow: auto;
+  height: 100vh;
 `;
 
 export const PokedexWrapper = styled.div`
