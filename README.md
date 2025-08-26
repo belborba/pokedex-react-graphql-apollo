@@ -10,7 +10,8 @@ A Pokédex simulation app built with **React**, powered by **GraphQL** data (htt
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
 ## Demo
-
+Link: https://belborba.github.io/pokedex-react-graphql-apollo/
+<img src="https://github.com/user-attachments/assets/644956bc-de9d-4b1f-a265-69fadf9d6a68" width="400" />
 
 
 ## Features
@@ -23,14 +24,16 @@ A Pokédex simulation app built with **React**, powered by **GraphQL** data (htt
 
 ## Technologies Used
 
-| Technology    | Purpose                                          |
-| ------------- | ------------------------------------------------ |
-| React         | Frontend library for building the user interface |
-| TypeScript    | Strongly typed JavaScript for more robust coding |
-| Vite          | Fast build tool and development server           |
-| Apollo Client | GraphQL client for querying and managing data    |
-| GraphQL       | Flexible, efficient data query language          |
-| ESLint        | Code linting to maintain quality and consistency |
+| Technology         | Purpose                                             |
+| ------------------ | --------------------------------------------------- |
+| React              | Frontend library for building the user interface   |
+| TypeScript         | Strongly typed JavaScript for more robust coding  |
+| Vite               | Fast build tool and development server             |
+| Apollo Client      | GraphQL client for querying and managing data      |
+| Styled Components  | Library for writing CSS-in-JS and styling React components |
+| GraphQL            | Flexible, efficient data query language            |
+| ESLint             | Code linting to maintain quality and consistency  |
+
 
 
 ## Project Structure *(optional)*
