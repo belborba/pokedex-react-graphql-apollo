@@ -11,6 +11,7 @@ A Pokédex simulation app built with **React**, powered by **GraphQL** data (htt
 
 ## Demo
 Link: https://belborba.github.io/pokedex-react-graphql-apollo/
+
 <img src="https://github.com/user-attachments/assets/644956bc-de9d-4b1f-a265-69fadf9d6a68" width="400" />
 
 
