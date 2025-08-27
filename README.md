@@ -37,30 +37,6 @@ Link: https://belborba.github.io/pokedex-react-graphql-apollo/
 
 
 
-## Project Structure *(optional)*
-
-```
-src/
-├── components/
-│   └── [ComponentName].tsx
-├── hooks/
-│   └── usePokemon.ts
-├── pages/
-│   └── [PageName].tsx
-├── styles/
-│   └── style.ts
-├── App.tsx
-└── main.tsx
-```
-
-Use imports like:
-
-```tsx
-import { usePokemon } from "@/hooks/usePokemon";
-import { BigScreenContainer } from "./styles";
-```
-
-
 ## Setup & Installation
 
 1. **Clone the repository**
