@@ -12,7 +12,9 @@ A Pokédex simulation app built with **React**, powered by **GraphQL** data (htt
 ## Demo
 Link: https://belborba.github.io/pokedex-react-graphql-apollo/
 
-<img src="https://github.com/user-attachments/assets/644956bc-de9d-4b1f-a265-69fadf9d6a68" width="400" />
+
+![Adobe Express - pokedexpreview](https://github.com/user-attachments/assets/2f7445f8-c761-44e7-9241-b55468aad702)
+
 
 
 ## Features
@@ -80,7 +82,6 @@ The entire UI was designed from scratch by me, focusing on:
 * Responsive components for various screen sizes
 * Consistent design system across components
 
----
 
 ## License
 
