@@ -1,6 +1,6 @@
 # Pokédex React (GraphQL + Apollo)
 
-A Pokédex simulation app built with **React**, powered by **GraphQL** data (https://pokeapi.co/docs/graphql) fetching using **Apollo Client**, with a user interface fully designed by the author.
+A Pokédex simulation app built with **React**, powered by **GraphQL** data (https://pokeapi.co/docs/graphql) fetching using **Apollo Client**, with a user interface fully designed by me.
 
 ![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-5.4.0-646CFF?logo=vite&logoColor=white)
