@@ -1,4 +1,5 @@
 // EvolutionsRender.tsx
+import { pokemonNameVar } from "@/graphql/reactiveVars";
 import { Wrapper, Container } from "./style";
 import React from "react";
 
@@ -16,11 +17,22 @@ export const Evolutions: React.FC<EvolutionsProps> = ({ evolutions }) => {
 
   if (validEvolutions.length === 0) return null;
 
+  const handleClick = (name: string) => {
+    pokemonNameVar(name);
+  };
+
   return (
     <Container>
       {validEvolutions.map((evo, index) => (
         <Wrapper key={index}>
-          <img src={evo.image!} alt={evo.name} />
+          <img
+            style={{ cursor: "pointer" }}
+            src={evo.image!}
+            alt={evo.name}
+            onClick={() => {
+              handleClick(evo.name);
+            }}
+          />
           <span>{evo.name}</span>
         </Wrapper>
       ))}
