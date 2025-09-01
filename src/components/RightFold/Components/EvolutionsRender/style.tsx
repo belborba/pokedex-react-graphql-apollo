@@ -1,20 +1,24 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+type ContainerProps = {
+  $count: number;
+};
+
+export const Container = styled.div<ContainerProps>`
   display: flex;
-  justify-content: center;
   gap: 1rem;
   padding: 10px;
+  justify-content: ${(props) => (props.$count <= 3 ? "center" : "flex-start")};
+  gap: 16px;
   overflow-x: auto;
   overflow-y: hidden;
 
-  /* Estilização da scrollbar */
   &::-webkit-scrollbar {
     height: 6px;
   }
 
   &::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: transparent;
     border-radius: 3px;
   }
 
@@ -35,13 +39,7 @@ export const Wrapper = styled.div`
   text-align: center;
 
   img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-  }
-
-  span {
-    font-size: 14px;
-    color: #333;
+    width: 70px;
+    height: 70px;
   }
 `;

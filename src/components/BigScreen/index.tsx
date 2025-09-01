@@ -15,7 +15,7 @@ export function BigScreen({ title, height, children }: BigScreenProps) {
   return (
     <BigScreenContainer $height={height}>
       <Title>{title}</Title>
-      <Content>{loading ? <Loading /> : children}</Content>
+      {loading ? <Loading /> : children}
     </BigScreenContainer>
   );
 }

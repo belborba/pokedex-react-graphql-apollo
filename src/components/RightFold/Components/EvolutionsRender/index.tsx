@@ -22,7 +22,7 @@ export const Evolutions: React.FC<EvolutionsProps> = ({ evolutions }) => {
   };
 
   return (
-    <Container>
+    <Container $count={validEvolutions.length}>
       {validEvolutions.map((evo, index) => (
         <Wrapper key={index}>
           <img

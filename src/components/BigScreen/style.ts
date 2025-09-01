@@ -16,24 +16,6 @@ export const BigScreenContainer = styled.div<BigScreenProps>`
   padding: 20px;
   box-shadow: 3px 3px 16px 0 #bdc0c7 inset, 0px 0px 4px #bdc0c7;
   height: ${(props) => props.$height || "auto"};
-
-  /* Estilização da scrollbar */
-  &::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: rgba(148, 163, 190, 0.3);
-    border-radius: 3px;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background: rgba(148, 163, 190, 0.5);
-  }
 `;
 
 export const Title = styled.h3`
@@ -52,8 +34,6 @@ export const Title = styled.h3`
 
 export const Content = styled.div`
   margin-top: 20px;
-  justify-self: center;
-  align-self: center;
   font-size: 14px;
   width: 100%;
 `;
