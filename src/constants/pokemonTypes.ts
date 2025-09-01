@@ -23,7 +23,7 @@ export const TYPE_GRADIENTS: Record<PokemonType, string[]> = {
   fire: ["#F5AC78", "#F08030"],
   water: ["#9DB7F5", "#6890F0"],
   electric: ["#FAE078", "#F8D030"],
-  psychic: ["#FA92B2", "#F85888"],
+  psychic: ["#FF9896", "#C66663"],
   normal: ["#C6C6A7", "#A8A878"],
   fighting: ["#D67873", "#C03028"],
   flying: ["#C6B7F5", "#A890F0"],
