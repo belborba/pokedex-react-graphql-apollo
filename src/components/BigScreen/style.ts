@@ -13,7 +13,7 @@ export const BigScreenContainer = styled.div<BigScreenProps>`
   border-radius: 24px;
   border: 5px solid #fff;
   background: #f2f4f8;
-  padding: 20px;
+  padding: 0px 20px;
   box-shadow: 3px 3px 16px 0 #bdc0c7 inset, 0px 0px 4px #bdc0c7;
   height: ${(props) => props.$height || "auto"};
 `;
@@ -33,7 +33,7 @@ export const Title = styled.h3`
 `;
 
 export const Content = styled.div`
-  margin-top: 20px;
+  margin-top: 24px;
   font-size: 14px;
   width: 100%;
 `;

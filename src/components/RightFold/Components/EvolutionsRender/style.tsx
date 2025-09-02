@@ -5,9 +5,9 @@ type ContainerProps = {
 };
 
 export const Container = styled.div<ContainerProps>`
+  width: 95%;
   display: flex;
   gap: 1rem;
-  padding: 10px;
   justify-content: ${(props) => (props.$count <= 3 ? "center" : "flex-start")};
   gap: 16px;
   overflow-x: auto;
@@ -33,6 +33,8 @@ export const Container = styled.div<ContainerProps>`
 `;
 
 export const Wrapper = styled.div`
+  margin-top: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,5 +43,10 @@ export const Wrapper = styled.div`
   img {
     width: 70px;
     height: 70px;
+  }
+
+  span {
+    font-size: 14px;
+    color: #333;
   }
 `;

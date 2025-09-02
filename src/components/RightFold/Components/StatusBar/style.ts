@@ -1,9 +1,16 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+`;
+
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  width: 100%;
 `;
 
 export const Label = styled.span`
@@ -13,7 +20,7 @@ export const Label = styled.span`
 `;
 
 export const BarContainer = styled.div`
-  width: 400px;
+  width: 90%;
   height: 8px;
   background: #e6edfa;
   border-radius: 50px;

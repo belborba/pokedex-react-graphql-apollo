@@ -1,16 +1,15 @@
-import { Content } from "@/components/BigScreen/style";
 import { StatusBar } from "@/components/RightFold/Components/StatusBar";
 import type { GetPokemonQuery } from "@/graphql/generated";
 import { usePokemon } from "@/hooks/usePokemon";
+import { Container } from "../StatusBar/style";
 
 export const Stats = () => {
   const { stats, types } = usePokemon();
 
-  // Pega apenas o primeiro tipo
-  const firstType = types?.[0] ?? null;
+  const firstType = types?.[0] ?? "";
 
   return (
-    <Content>
+    <Container>
       {stats?.length
         ? stats.map((s: GetPokemonQuery["pokemon"][0]["pokemonstats"][0]) => (
             <StatusBar
@@ -21,6 +20,6 @@ export const Stats = () => {
             />
           ))
         : null}
-    </Content>
+    </Container>
   );
 };

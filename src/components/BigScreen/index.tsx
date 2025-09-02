@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { BigScreenContainer, Title, Content } from "./style";
+import { BigScreenContainer, Title } from "./style";
 import { Loading } from "../Loading";
 import { usePokemon } from "@/hooks/usePokemon";
 

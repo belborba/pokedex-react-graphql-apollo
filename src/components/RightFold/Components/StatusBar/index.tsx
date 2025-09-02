@@ -18,6 +18,7 @@ export const StatusBar: React.FC<StatusBarProps> = ({
     : ["#ddd", "#aaa"];
 
   const [displayValue, setDisplayValue] = useState(0);
+
   useEffect(() => {
     setDisplayValue(0);
     const id = setTimeout(
